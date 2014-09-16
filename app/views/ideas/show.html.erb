@@ -2,17 +2,17 @@
   
   <p><%= link_to image_tag("arrow-previous.jpeg", width:25)+" ", ideas_path %></p>
 
-  <div class="span3">
-    <b><%= @idea.user.name %></b>, <%= @idea.user.created_at %>:<br>
-    <%= show_idea_image(@idea, width: 100) %> <br>
-  </div>
 
-  <div class="span3">
-    <p><strong>Name:</strong><%= @idea.name %></p>
-  </div>
+  <b><%= @idea.user.name %></b>, <%= @idea.user.created_at %>:<br>
+  
 
-  <p> <strong>Description:</strong> <%= @idea.description %> </p>
+  <p><strong>Name:</strong><%= @idea.name %></p>
+
+  <p> <%= @idea.description %> </p>
   Last edited on <%= @idea.user.updated_at %><br>
+  
+  <%= show_idea_image(@idea, width: 100) %> <br>
+
   <p>
     <% if can? :update, @idea %>  
       <%= link_to 'Edit', edit_idea_path(@idea) %> 
@@ -28,7 +28,7 @@
     <% @comments.each do |comment| %>
 
     <!--TODO: border drum!-->
-      <div style="border-radius: 5px" >
+      <div>
         <strong><%= comment.user_name %></strong>
         <br />
         <p><%= comment.body %></p>
