@@ -1,0 +1,20 @@
+<!-- <p id="notice"><%= notice %></p>  - dient normalerweise dem Anzeigen von Nachrichten, wird aber in der application.html.erb ausgegeben-->
+
+<p>
+  <strong>User name:</strong>
+  <%= @comment.user_name %>
+</p>
+
+<p>
+  <strong>Body:</strong>
+  <%= @comment.body %>
+</p>
+
+<p>
+  <strong>Idea:</strong>
+  <%= @comment.idea_id %>
+</p>
+
+<%= link_to 'Edit', edit_idea_comment_path(@comment.idea_id, @comment) %> |
+<%=	link_to 'Delete', idea_comment_path(@comment.idea_id, @comment), method: :delete, data: { confirm: "Are you sure?" } %>
+<%= link_to 'Back', idea_comments_path(@comment.idea_id) %>

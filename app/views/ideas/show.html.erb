@@ -1,0 +1,49 @@
+<div class="row">
+  
+  <p><%= link_to image_tag("arrow-previous.jpeg", width:25)+" ", ideas_path %></p>
+
+  <div class="span3">
+    <b><%= @idea.user.name %></b>, <%= @idea.user.created_at %>:<br>
+    <%= show_idea_image(@idea, width: 100) %> <br>
+  </div>
+
+  <div class="span3">
+    <p><strong>Name:</strong><%= @idea.name %></p>
+  </div>
+
+  <p> <strong>Description:</strong> <%= @idea.description %> </p>
+  Last edited on <%= @idea.user.updated_at %><br>
+  <p>
+    <% if can? :update, @idea %>  
+      <%= link_to 'Edit', edit_idea_path(@idea) %> 
+    <% end %>
+    <% if can? :delete, @idea %>
+      <%= link_to 'Delete', @idea, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
+  </p>
+
+    <!--BEGIN Content für Kommentare-->
+    <h3>Comments</h3>
+    <!--show all comments-->
+    <% @comments.each do |comment| %>
+
+    <!--TODO: border drum!-->
+      <div style="border-radius: 5px" >
+        <strong><%= comment.user_name %></strong>
+        <br />
+        <p><%= comment.body %></p>
+        <p>
+          <% if can? :update, comment %>
+            <%= link_to 'Edit', edit_idea_comment_path(@idea, comment)%>
+          <% end %>
+          <% if can? :delete, comment %> 
+            <%= link_to 'Delete', idea_comment_path(@idea, comment), method: :delete, data: { confirm: 'Are you sure?'}%>
+          <% end %>
+      </p>
+      </div>
+    <% end %>
+      <!--show comment dialog for adding another ocmment-->
+      <%= render "comments/form" %>
+  	<!--END Content für Kommentare-->
+  </p>
+</div>

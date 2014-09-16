@@ -1,0 +1,424 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "app/views/comments/_form.html.erb",
+			"settings":
+			{
+				"buffer_size": 647,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/ideas/show.html.erb",
+			"settings":
+			{
+				"buffer_size": 860,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "config/routes.rb",
+			"settings":
+			{
+				"buffer_size": 1897,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "class IdeasController < ApplicationController\n  before_action :set_idea, only: [:show, :edit, :update, :destroy]\n\n  # GET /ideas\n  # GET /ideas.json\n  # def index\n    # @ideas = Idea.all\n  # end\n\n  # GET /ideas/1\n  # GET /ideas/1.json\n  def show\n  end\n\n  # GET /ideas/new\n  def new\n    @idea = Idea.new\n  end\n    \n  # GET /ideas/1/edit\n  def edit\n  end\n  # POST /ideas\n  # POST /ideas.json\n  def create\n    @idea = Idea.new(idea_params)\n\n    respond_to do |format|\n      if @idea.save\n        format.html { redirect_to @idea, notice: 'Idea was successfully created.' }\n        format.json { render :show, status: :created, location: @idea }\n      else\n        format.html { render :new }\n        format.json { render json: @idea.errors, status: :unprocessable_entity }\n      end\n    end\n  end\n\n  # PATCH/PUT /ideas/1\n  # PATCH/PUT /ideas/1.json\n  def update\n    respond_to do |format|\n      if @idea.update(idea_params)\n        format.html { redirect_to @idea, notice: 'Idea was successfully updated.' }\n        format.json { render :show, status: :ok, location: @idea }\n      else\n        format.html { render :edit }\n        format.json { render json: @idea.errors, status: :unprocessable_entity }\n      end\n    end\n  end\n\n  # DELETE /ideas/1\n  # DELETE /ideas/1.json\n  def destroy\n    @idea.destroy\n    respond_to do |format|\n      format.html { redirect_to ideas_url, notice: 'Idea was successfully destroyed.' }\n      format.json { head :no_content }\n    end\n  end\n\n  private\n    # Use callbacks to share common setup or constraints between actions.\n    def set_idea\n      @idea = Idea.find(params[:id])\n\n      @comments = @idea.comments.all\n      @comment = @idea.comments.build\n    end\n\n    # Never trust parameters from the scary internet, only allow the white list through.\n    def idea_params\n      params.require(:idea).permit(:name, :description, :picture)\n    end\nend\n",
+			"file": "app/controllers/ideas_controller.rb",
+			"file_size": 1875,
+			"file_write_time": 1410358207000000,
+			"settings":
+			{
+				"buffer_size": 1881,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/controllers/comments_controller.rb",
+			"settings":
+			{
+				"buffer_size": 1976,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/models/idea.rb",
+			"settings":
+			{
+				"buffer_size": 170,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"selected_items":
+		[
+			[
+				"",
+				"Build: Build"
+			]
+		],
+		"width": 530.0
+	},
+	"console":
+	{
+		"height": 139.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/home/benjamin/Schreibtisch/shortcuts sublime.txt",
+		"/home/benjamin/projects/railsgirls/app/views/comments/_form.html.erb",
+		"/home/benjamin/projects/railsgirls/app/models/comment.rb",
+		"/home/benjamin/projects/railsgirls/app/views/comments/index.html.erb",
+		"/home/benjamin/projects/railsgirls/app/views/comments/edit.html.erb",
+		"/home/benjamin/projects/railsgirls/app/views/ideas/edit.html.erb",
+		"/home/benjamin/projects/railsgirls/app/models/.keep",
+		"/home/benjamin/projects/railsgirls/app/uploaders/picture_uploader.rb",
+		"/home/benjamin/projects/railsgirls/app/controllers/ideas_controller.rb",
+		"/home/benjamin/projects/railsgirls/app/models/idea.rb",
+		"/home/benjamin/projects/railsgirls/app/views/ideas/show.html.erb",
+		"/home/benjamin/projects/railsgirls/app/views/ideas/_form.html.erb",
+		"/home/benjamin/projects/railsgirls/app/views/ideas/index.html.erb",
+		"/home/benjamin/projects/railsgirls/app/assets/stylesheets/application.css",
+		"/home/benjamin/projects/railsgirls/app/helpers/ideas_helper.rb",
+		"/home/benjamin/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
+		"/home/benjamin/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
+		"/home/benjamin/projects/railsgirls/config/routes.rb",
+		"/home/benjamin/projects/railsgirls/app/views/layouts/application.html.erb",
+		"/home/benjamin/projects/railsgirls/app/views/pages/info.html.erb",
+		"/home/benjamin/projects/railsgirls/Gemfile"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": true,
+		"find_history":
+		[
+			"set_comment",
+			"+",
+			"<%= form_for(@comment) do |f| %>\n  <% if @comment.errors.any? %>\n    <div id=\"error_explanation\">\n      <h2><%= pluralize(@comment.errors.count, \"error\") %> prohibited this comment from being saved:</h2>\n\n      <ul>\n      <% @comment.errors.full_messages.each do |message| %>\n        <li><%= message %></li>\n      <% end %>\n      </ul>\n    </div>\n  <% end %>\n\n  <div class=\"field\">\n    <%= f.label :user_name %><br>\n    <%= f.text_field :user_name %>\n  </div>\n  <div class=\"field\">\n    <%= f.label :body %><br>\n    <%= f.text_area :body %>\n    <%= f.hidden_field :idea_id %>\n  </div>\n  <div class=\"actions\">\n    <%= f.submit %>\n  </div>\n<% end %>\n",
+			"</",
+			"each",
+			"ach",
+			"a",
+			"end",
+			"tD",
+			"td",
+			"<",
+			"private"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			" + ",
+			"td",
+			"tD",
+			"\n"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "app/views/comments/_form.html.erb",
+					"settings":
+					{
+						"buffer_size": 647,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								571,
+								571
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "app/views/ideas/show.html.erb",
+					"settings":
+					{
+						"buffer_size": 860,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								714,
+								714
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "config/routes.rb",
+					"settings":
+					{
+						"buffer_size": 1897,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1550,
+								1550
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 2,
+			"sheets":
+			[
+				{
+					"buffer": 3,
+					"file": "app/controllers/ideas_controller.rb",
+					"settings":
+					{
+						"buffer_size": 1881,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								437,
+								437
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby on Rails.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 153.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/controllers/comments_controller.rb",
+					"settings":
+					{
+						"buffer_size": 1976,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								530,
+								530
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 340.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/models/idea.rb",
+					"settings":
+					{
+						"buffer_size": 170,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								170,
+								170
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.650872817955,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 190.0
+	},
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+			[
+				"_form",
+				"views/comments/_form.html.erb"
+			],
+			[
+				"ideas_co",
+				"controllers/ideas_controller.rb"
+			],
+			[
+				"ideas",
+				"controllers/ideas_controller.rb"
+			],
+			[
+				"u",
+				"uploaders/picture_uploader.rb"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": false,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 176.0,
+	"status_bar_visible": true
+}
