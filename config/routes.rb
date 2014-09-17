@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   
   devise_for :users
+
+  get "users/:id" => "user_profiles#show", as: :user
+  get "users/" => "user_profiles#index", as: :users
+  #resources :user_profiles, only: [:index, :show]
+
   get 'pages/info'
 
   # resources :admin do

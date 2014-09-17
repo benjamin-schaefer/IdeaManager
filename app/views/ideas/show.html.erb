@@ -12,7 +12,7 @@
             <%= show_image(current_idea.user, width:10) %>
             <b><%= current_idea.user.name %></b>
           </td>
-          <td align="right"><%= current_idea.user.created_at.strftime("%B %d %Y, %H:%M:%S") %></td>
+          <td align="right"><%= format_date(current_idea.user.created_at) %></td>
         </tr>
 
         <tr>
@@ -24,7 +24,7 @@
         </tr> 
       </table>
       <br>
-        Last edited on <%= current_idea.user.updated_at.strftime("%B %d %Y, %H:%M:%S") %>
+        Last edited on <%= format_date(current_idea.user.updated_at) %>
         <br />
         <%= link_to 'Edit', edit_idea_path(current_idea) if can? :update, current_idea %>
         <%= link_to 'Delete', current_idea, method: :delete, data: { confirm: 'Are you sure?' } if can? :delete, current_idea %> 
