@@ -1,29 +1,28 @@
-<div class="row">
+<div class="row" >
   
   <p><%= link_to image_tag("arrow-previous.jpeg", width:25)+" ", ideas_path %></p>
 
-
-  <b><%= @idea.user.name %></b>, <%= @idea.user.created_at %>:<br>
-  
-
-  <p><strong>Name:</strong><%= @idea.name %></p>
-
-  <p> <%= @idea.description %> </p>
-  Last edited on <%= @idea.user.updated_at %><br>
-  
-  <%= show_idea_image(@idea, width: 100) %> <br>
-
-  <p>
-    <% if can? :update, @idea %>  
-      <%= link_to 'Edit', edit_idea_path(@idea) %> 
-    <% end %>
-    <% if can? :delete, @idea %>
-      <%= link_to 'Delete', @idea, method: :delete, data: { confirm: 'Are you sure?' } %>
-    <% end %>
-  </p>
+  <table border="1" padding="1px">
+    <td>
+      <%= show_image(@idea.user, width:10) %>
+      <b><%= @idea.user.name %>,</b>
+      <%= @idea.user.created_at.strftime("%B %d %Y, %H:%M:%S") %>
+      
+      <h4><%= @idea.name %></h4></p>
+      <table>
+        <td><%= show_idea_image(@idea, width: 100) %> <br></td>
+        <td valign="top"><p> <%= @idea.description %> </p></td>
+      </table>
+      <p>Last edited on <%= @idea.user.updated_at.strftime("%B %d %Y, %H:%M:%S") %></p>
+      
+      <br />
+        <%= link_to 'Edit', edit_idea_path(@idea) if can? :update, @idea %>
+        <%= link_to 'Delete', @idea, method: :delete, data: { confirm: 'Are you sure?' } if can? :delete, @idea %>
+    </td>
+  </table>
 
     <!--BEGIN Content für Kommentare-->
-    <h3>Comments</h3>
+    <h4>Comments</h4>
     <!--show all comments-->
     <% @comments.each do |comment| %>
 
@@ -43,7 +42,7 @@
       </div>
     <% end %>
       <!--show comment dialog for adding another ocmment-->
-      <%= render "comments/form" %>
+      <%= render "comments/form" if user_signed_in? %>
   	<!--END Content für Kommentare-->
   </p>
 </div>
