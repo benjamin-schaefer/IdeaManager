@@ -2,47 +2,49 @@
   
   <p><%= link_to image_tag("arrow-previous.jpeg", width:25)+" ", ideas_path %></p>
 
-  <table border="1" padding="1px">
-    <td>
-      <%= show_image(@idea.user, width:10) %>
-      <b><%= @idea.user.name %>,</b>
-      <%= @idea.user.created_at.strftime("%B %d %Y, %H:%M:%S") %>
-      
-      <h4><%= @idea.name %></h4></p>
+  <table border="1" class="border">
+    <td class="border">
+
       <table>
-        <td><%= show_idea_image(@idea, width: 100) %> <br></td>
-        <td valign="top"><p> <%= @idea.description %> </p></td>
+        <tr>
+          <td>
+            <%= show_image(@idea.user, width:10) %>
+            <b><%= @idea.user.name %></b>
+          </td>
+          <td align="right"><%= @idea.user.created_at.strftime("%B %d %Y, %H:%M:%S") %></td>
+        </tr>
+
+        <tr>
+          <td colspan="2"><h4><%= @idea.name %></h4></td>
+        </tr>
+        <tr>
+          <td><%= show_idea_image(@idea, width: 100) %> <br></td>
+          <td valign="top"><p> <%= @idea.description %> </p></td>
+        </tr> 
       </table>
-      <p>Last edited on <%= @idea.user.updated_at.strftime("%B %d %Y, %H:%M:%S") %></p>
-      
-      <br />
+      <br>
+        Last edited on <%= @idea.user.updated_at.strftime("%B %d %Y, %H:%M:%S") %>
+        <br />
         <%= link_to 'Edit', edit_idea_path(@idea) if can? :update, @idea %>
-        <%= link_to 'Delete', @idea, method: :delete, data: { confirm: 'Are you sure?' } if can? :delete, @idea %>
+        <%= link_to 'Delete', @idea, method: :delete, data: { confirm: 'Are you sure?' } if can? :delete, @idea %> 
     </td>
   </table>
 
     <!--BEGIN Content für Kommentare-->
     <h4>Comments</h4>
-    <!--show all comments-->
     <% @comments.each do |comment| %>
-
-    <!--TODO: border drum!-->
-      <div>
+      <div class="comment">
+        <%= show_image(comment.user, width:10) %>
         <strong><%= comment.user_name %></strong>
         <br />
         <p><%= comment.body %></p>
         <p>
-          <% if can? :update, comment %>
-            <%= link_to 'Edit', edit_idea_comment_path(@idea, comment)%>
-          <% end %>
-          <% if can? :delete, comment %> 
-            <%= link_to 'Delete', idea_comment_path(@idea, comment), method: :delete, data: { confirm: 'Are you sure?'}%>
-          <% end %>
+          <%= link_to 'Edit', edit_idea_comment_path(@idea, comment) if can? :update, comment %>
+          <%= link_to 'Delete', idea_comment_path(@idea, comment), method: :delete, data: { confirm: 'Are you sure?'} if can? :delete, comment %>
       </p>
       </div>
     <% end %>
-      <!--show comment dialog for adding another ocmment-->
-      <%= render "comments/form" if user_signed_in? %>
+    <%= render "comments/form" if user_signed_in? %>
   	<!--END Content für Kommentare-->
   </p>
 </div>

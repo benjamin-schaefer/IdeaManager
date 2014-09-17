@@ -21,8 +21,8 @@
 
 				<!-- sign up | Login -->
 	      	<% if user_signed_in? %>
-	      		<%= link_to current_user.name, edit_user_registration_path %>
 	      		<%= link_to show_image(current_user, width:20), edit_user_registration_path if current_user.picture.present? %>
+	      		<%= link_to current_user.name, edit_user_registration_path %>
 	      		<li><%= link_to 'Edit profile', edit_user_registration_path, class: 'navbar-link' %></li> 
 	      		<li><%= link_to 'Logout', destroy_user_session_path, method: :delete, class: 'navbar-link' %></li>
 
