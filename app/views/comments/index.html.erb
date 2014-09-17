@@ -11,7 +11,7 @@
   </thead>
 
   <tbody>
-    <% @comments.each do |comment| %>
+    <% current_comments.each do |comment| %>
       <tr>
         <td><%= comment.user_name %></td>
         <td><%= comment.body %></td>
@@ -30,4 +30,4 @@
 
 <br>
 
-<%= link_to 'New Comment', new_idea_comment_path(@idea) %>
+<%= link_to 'New Comment', new_idea_comment_path(current_idea) %>

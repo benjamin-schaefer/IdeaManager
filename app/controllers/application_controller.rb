@@ -6,6 +6,7 @@ class ApplicationController < ActionController::Base
   #before_action :authenticate_user!
   #before_filter <=> before_action?
   before_action :configure_permitted_parameters, if: :devise_controller?
+  before_action :ensure_access
 
   protected
 
@@ -13,5 +14,13 @@ class ApplicationController < ActionController::Base
   def configure_permitted_parameters
     devise_parameter_sanitizer.for(:sign_up) << [ :name, :picture ]
     devise_parameter_sanitizer.for(:account_update) << [ :name, :picture ]
+  end
+
+  def ensure_access
+    p controller_name.classify.constantize
+    if !can?(action_name.to_sym, controller_name.classify.constantize)
+      fail "access denied"
+    end
+  rescue NameError #NameError abfangen
   end
 end

@@ -1,10 +1,10 @@
-<%= form_for @idea, :html => {:multipart => true} do |f| %>
-  <% if @idea.errors.any? %>
+<%= form_for current_idea, :html => {:multipart => true} do |f| %>
+  <% if current_idea.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@idea.errors.count, "error") %> prohibited this idea from being saved:</h2>
+      <h2><%= pluralize(current_idea.errors.count, "error") %> prohibited this idea from being saved:</h2>
 
       <ul>
-      <% @idea.errors.full_messages.each do |message| %>
+      <% current_idea.errors.full_messages.each do |message| %>
         <li><%= message %></li>
       <% end %>
       </ul>
@@ -22,8 +22,8 @@
   </div>
   <div class="field">
     <%= f.label :picture %>
-    <% if @idea.picture.present? %>
-       <%= show_idea_image(@idea, width: 150) %>
+    <% if current_idea.picture.present? %>
+       <%= show_idea_image(current_idea, width: 150) %>
     <% end %><br>
     <%= f.file_field :picture, accept: "image/*" %> <!--nur Bilddateien anzeigen! (erzeugter html-Code: 'accept="image/*"'-->
   </div><br>

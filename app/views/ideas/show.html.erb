@@ -1,6 +1,7 @@
 <div class="row" >
   
-  <p><%= link_to image_tag("arrow-previous.jpeg", width:25)+" ", ideas_path %></p>
+  <!-- image_tag("arrow-previous.jpeg", width:25) -->
+  <p><%= link_to "Back", ideas_path %></p>
 
   <table border="1" class="border">
     <td class="border">
@@ -8,43 +9,43 @@
       <table>
         <tr>
           <td>
-            <%= show_image(@idea.user, width:10) %>
-            <b><%= @idea.user.name %></b>
+            <%= show_image(current_idea.user, width:10) %>
+            <b><%= current_idea.user.name %></b>
           </td>
-          <td align="right"><%= @idea.user.created_at.strftime("%B %d %Y, %H:%M:%S") %></td>
+          <td align="right"><%= current_idea.user.created_at.strftime("%B %d %Y, %H:%M:%S") %></td>
         </tr>
 
         <tr>
-          <td colspan="2"><h4><%= @idea.name %></h4></td>
+          <td colspan="2"><h4><%= current_idea.name %></h4></td>
         </tr>
         <tr>
-          <td><%= show_idea_image(@idea, width: 100) %> <br></td>
-          <td valign="top"><p> <%= @idea.description %> </p></td>
+          <td><%= show_idea_image(current_idea, width: 100) %> <br></td>
+          <td valign="top"><p> <%= current_idea.description %> </p></td>
         </tr> 
       </table>
       <br>
-        Last edited on <%= @idea.user.updated_at.strftime("%B %d %Y, %H:%M:%S") %>
+        Last edited on <%= current_idea.user.updated_at.strftime("%B %d %Y, %H:%M:%S") %>
         <br />
-        <%= link_to 'Edit', edit_idea_path(@idea) if can? :update, @idea %>
-        <%= link_to 'Delete', @idea, method: :delete, data: { confirm: 'Are you sure?' } if can? :delete, @idea %> 
+        <%= link_to 'Edit', edit_idea_path(current_idea) if can? :update, current_idea %>
+        <%= link_to 'Delete', current_idea, method: :delete, data: { confirm: 'Are you sure?' } if can? :delete, current_idea %> 
     </td>
   </table>
 
     <!--BEGIN Content für Kommentare-->
     <h4>Comments</h4>
-    <% @comments.each do |comment| %>
+    <% current_idea.comments.each do |comment| %>
       <div class="comment">
         <%= show_image(comment.user, width:10) %>
         <strong><%= comment.user_name %></strong>
         <br />
         <p><%= comment.body %></p>
         <p>
-          <%= link_to 'Edit', edit_idea_comment_path(@idea, comment) if can? :update, comment %>
-          <%= link_to 'Delete', idea_comment_path(@idea, comment), method: :delete, data: { confirm: 'Are you sure?'} if can? :delete, comment %>
+          <%= link_to 'Edit', edit_idea_comment_path(current_idea, comment) if can? :update, comment %>
+          <%= link_to 'Delete', idea_comment_path(current_idea, comment), method: :delete, data: { confirm: 'Are you sure?'} if can? :delete, comment %>
       </p>
       </div>
     <% end %>
-    <%= render "comments/form" if user_signed_in? %>
+    <%= render "comments/form", current_comment: current_idea.comments.new  if user_signed_in? %>
   	<!--END Content für Kommentare-->
   </p>
 </div>
