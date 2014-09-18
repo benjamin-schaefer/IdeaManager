@@ -48,3 +48,9 @@ gem "cancancan"
 
 #use haml-rails for haml code in view files
 gem "haml-rails"
+
+#use activeAdmin for administration
+gem 'activeadmin', github: 'gregbell/active_admin' 
+#use railsAdmin also for administration
+gem 'rails_admin', :git => 'git://github.com/sferik/rails_admin.git'
+ 
