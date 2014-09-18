@@ -1,0 +1,25 @@
+= form_for current_idea, html: {multipart: true} do |f|
+  - if current_idea.errors.any?
+    .error_explanation
+      %h2= pluralize(current_idea.errors.count, "error") 
+      prohibited this idea from being saved
+      %ul
+      - current_idea.errors.full_messages.each do |message|
+        %li= message
+  .field
+    = f.label :name
+    = f.text_field :name
+  %br
+  .field
+    = f.label :description
+    = f.text_area :description
+  .field
+    = f.label :picture
+    = show_idea_image(current_idea, width: 150)
+    %br
+    = f.file_field :picture, accept: "image/*" #nur Bilddateien anzeigen! (erzeugter html-Code: 'accept="image/*"'
+  %br
+  .actions
+    = f.submit
+/debug action_name       - gibt aktuelle Action wieder(new, edit)
+/debug controller_name   - gibt aktuellen controller wieder (ideas in diesem Fall)

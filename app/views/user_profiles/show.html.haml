@@ -1,0 +1,7 @@
+= show_image(current_user_profile)
+= current_user_profile.name
+- if current_user_profile == current_user
+  Email:
+  = current_user_profile.email
+  %br
+  = link_to "Edit profile", edit_user_registration_path

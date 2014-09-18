@@ -2,14 +2,14 @@
 
 - user_profiles.each do |user_profile|
   %p
-    Name: #{user_profile.name}
+    Name: 
+    = user_profile.name
     %br
     = show_image(user_profile, width:100)
     %br
-
     - if user_profile == current_user || current_user.admin? 
-      id: #{user_profile.id} 
+      id: #{user_profile.id}
       %br
       = link_to "Edit profile", edit_user_registration_path 
       %br
-      = "Block User" if current_user.admin?
+      /= "Block User" if current_user.admin?

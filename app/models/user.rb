@@ -5,15 +5,15 @@ class User < ActiveRecord::Base
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
   has_many :ideas
-	has_many :comments
+  has_many :comments
 
   validates :name, uniqueness: true
 
-	#admin hart reingecodet
-  def admin?		#? -> boolean, Konvention zur Lesbarkeit
-  	 name == "Admin" && id == 10
-  	 #passwort: werbeboten
-  	 #email: admin@admin.de
+  #admin hart reingecodet
+  def admin?    #? -> boolean, Konvention zur Lesbarkeit
+     name == "Admin" && id == 10
+     #passwort: werbeboten
+     #email: admin@admin.de
   end
 end
 

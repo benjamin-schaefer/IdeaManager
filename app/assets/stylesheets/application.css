@@ -16,40 +16,40 @@
  */
 
 /*60px Abstand vom oberen Rand bis zur Überschrift*/
-body { padding-top: 0px; }		
+body { padding-top: 0px; }    
 
 /*100px Abstand vom Inhalt zum Footer*/
 footer { 
-	/*margin-top: 100px;*/
-	position: fixed;
-	bottom: 5px;
-	text-align: center;
-}	
+  /*margin-top: 100px;*/
+  position: fixed;
+  bottom: 5px;
+  text-align: center;
+}  
 
 /*Navigationsleiste*/
 ul { 
-	margin: 0px;
-	/*padding: 10px;*/
-	list-style: none;
-	/*width: 525px;*/
+  margin: 0px;
+  /*padding: 10px;*/
+  list-style: none;
+  /*width: 525px;*/
 }
 
 ul li {
-	display: inline;
+  display: inline;
 }
 
 ul#list-nav li a {
-	text-decoration: none;
-	padding: 5px 0;
-	width: 100px;
-	background:  #D3D3D3;
-	color: #444;
-	float: left;
-	text-align: center;
-	border-left: 1px solid #fff;
+  text-decoration: none;
+  padding: 5px 0;
+  width: 100px;
+  background:  #D3D3D3;
+  color: #444;
+  float: left;
+  text-align: center;
+  border-left: 1px solid #fff;
 }
 
 ul#list-nav li a:hover {
-	background: #a2b3a1;
-	color: #000;
+  background: #a2b3a1;
+  color: #000;
 }

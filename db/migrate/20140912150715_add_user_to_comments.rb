@@ -3,8 +3,8 @@ class AddUserToComments < ActiveRecord::Migration
     add_reference :comments, :user, index: true
 
     Comment.all.each do |comment|
-    	comment.user = User.where(name: comment.user_name).first_or_create!
-    	
+      comment.user = User.where(name: comment.user_name).first_or_create!
+      
     end
 
     remove_column :comments, :user_name

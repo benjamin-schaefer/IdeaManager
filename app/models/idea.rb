@@ -1,11 +1,11 @@
 class Idea < ActiveRecord::Base
-	mount_uploader :picture, PictureUploader
+  mount_uploader :picture, PictureUploader
 
-	#erst alle Comments löschen, um nicht zugewiesene comments zu verhindern
-	has_many :comments, dependent: :destroy
-	validates :name, presence:true
-	validates :description, presence:true
-	belongs_to :user
+  #erst alle Comments löschen, um nicht zugewiesene comments zu verhindern
+  has_many :comments, dependent: :destroy
+  validates :name, presence:true
+  validates :description, presence:true
+  belongs_to :user
 end
 
 # == Schema Information

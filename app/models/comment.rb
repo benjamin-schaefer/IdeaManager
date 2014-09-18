@@ -1,12 +1,12 @@
 class Comment < ActiveRecord::Base
-	belongs_to :idea
-	belongs_to :user
-	validates :user, presence:true
-	validates :body, presence:true
+  belongs_to :idea
+  belongs_to :user
+  validates :user, presence:true
+  validates :body, presence:true
 
-	def user_name
-		user.name
-	end
+  def user_name
+    user.name
+  end
 end
 
 # == Schema Information

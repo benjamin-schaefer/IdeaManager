@@ -1,0 +1,25 @@
+.container
+  %ul#list-nav
+    %li
+      = link_to "Ideas", ideas_path
+    - if user_signed_in?
+      %li
+        = link_to "New Idea", new_idea_path 
+    - if can? :read, User
+      %li
+        = link_to "User list", users_path 
+    /show | edit profile
+    - if user_signed_in?
+      %li 
+        = link_to 'Edit profile', edit_user_registration_path, class: 'navbar-link' 
+      %li
+        = link_to 'Logout', destroy_user_session_path, method: :delete, class: 'navbar-link'
+      /sign up | Login
+    - else 
+      %li  
+        = link_to "Sign up", new_user_registration_path, class: 'navbar-link'
+      %li
+        = link_to "Login", new_user_session_path, class: 'navbar-link'
+  - if user_signed_in?
+    = link_to show_image(current_user, width:35), user_path(current_user) 
+    = link_to current_user.name, user_path(current_user) 

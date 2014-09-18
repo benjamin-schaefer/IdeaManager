@@ -16,5 +16,5 @@
 </p>
 
 <%= link_to 'Edit', edit_idea_comment_path(current_comment.idea_id, current_comment) %> |
-<%=	link_to 'Delete', idea_comment_path(current_comment.idea_id, current_comment), method: :delete, data: { confirm: "Are you sure?" } %>
+<%=  link_to 'Delete', idea_comment_path(current_comment.idea_id, current_comment), method: :delete, data: { confirm: "Are you sure?" } %>
 <%= link_to 'Back', idea_comments_path(current_comment.idea_id) %>

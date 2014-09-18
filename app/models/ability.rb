@@ -25,7 +25,8 @@ class Ability
   #alle user, auch nicht geloggte
   def default
     #cannot
-    can :read, :all, except: User
+    can :read, :all
+    cannot :read, User
     can :create, User
   end
 end
