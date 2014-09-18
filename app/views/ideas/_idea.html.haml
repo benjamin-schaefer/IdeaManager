@@ -1,0 +1,4 @@
+.span4.idea{class: "idea-#{idea.id}"}
+  = show_idea_image(idea, width:100)
+  %h4= link_to idea.name, idea
+  = idea.description

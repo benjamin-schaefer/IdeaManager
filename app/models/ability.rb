@@ -20,6 +20,7 @@ class Ability
   def logged_user(user)
     can :create, [Idea, Comment]
     can [:update, :delete, :benjamin], [Idea, Comment], user_id: user.id
+    can :read, User
   end
 
   #alle user, auch nicht geloggte

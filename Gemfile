@@ -44,7 +44,7 @@ gem 'spring',        group: :development
 #use devise for user authentication
 gem 'devise'
 #use CanCan for authorization management
-gem "cancan"
+gem "cancancan"
 
 #use haml-rails for haml code in view files
 gem "haml-rails"

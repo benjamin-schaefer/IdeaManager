@@ -24,13 +24,6 @@
       = link_to 'Delete', current_idea, method: :delete, data: { confirm: 'Are you sure?' } if can? :delete, current_idea
   /Content für Kommentare
   %h4 Comments
-  - current_idea.comments.each do |comment|
-    .comment
-      = show_image(comment.user, width:20)
-      %strong= comment.user_name
-      %br
-      %p= comment.body
-      %p
-        = link_to 'Edit', edit_idea_comment_path(current_idea, comment) if can? :update, comment
-        = link_to 'Delete', idea_comment_path(current_idea, comment), method: :delete, data: { confirm: 'Are you sure?'} if can? :delete, comment
+  = render current_idea.comments
+    
   = render "comments/form", current_comment: current_idea.comments.new  if user_signed_in?
