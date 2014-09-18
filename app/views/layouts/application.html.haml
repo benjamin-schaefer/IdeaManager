@@ -12,10 +12,10 @@
     %p
       .container
         - if notice
-          %p{class:"alert alert-success"}
-          = notice
+          %p.alert.alert-success
+            = notice
         - if alert
-          %p{class:"alert alert-danger"}
-          = alert
+          %p.alert.alert-danger
+            = alert
         = yield
     = render("shared/footer")

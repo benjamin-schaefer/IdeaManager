@@ -29,5 +29,6 @@ class Ability
     can :read, :all
     cannot :read, User
     can :create, User
+
   end
 end
