@@ -2,11 +2,9 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
-    return if user.locked
-
     default
-
     return unless user #end, falls kein user vorhanden
+    return if user.locked
 
     logged_user(user)    
     
