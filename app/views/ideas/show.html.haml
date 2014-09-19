@@ -7,7 +7,11 @@
         %tr
           %td
             = show_image(current_idea.user, width:20)
-            %b= current_idea.user.name
+            %b
+              - if can? :show, current_idea.user
+                = link_to current_idea.user.name, current_idea.user
+              - else  
+                = current_idea.user.name
           %td{align:"right"}= format_date(current_idea.user.created_at)
         %tr
           %td{colspan:"2"}
@@ -25,5 +29,4 @@
   /Content für Kommentare
   %h4 Comments
   = render current_idea.comments
-    
   = render "comments/form", current_comment: current_idea.comments.new

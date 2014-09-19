@@ -1,6 +1,10 @@
 .comment
   = show_image(comment.user, width:20)
-  %strong= comment.user_name
+  %b
+    - if can? :show, comment.user
+      = link_to comment.user_name, comment.user
+    - else
+      = comment.user_name
   %br
   %p= comment.body
   %p
