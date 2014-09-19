@@ -2,12 +2,15 @@
   %ul#list-nav
     %li
       = link_to "Ideas", ideas_path
-    - if user_signed_in?
+    - if can? :create, Idea
       %li
         = link_to "New Idea", new_idea_path 
-    - if can? :read, User
+    - if can? :index, User
       %li
         = link_to "User list", users_path 
+    - if current_user && current_user.admin?
+      %li
+        = link_to "Admin site", rails_admin_path
     /show | edit profile
     - if user_signed_in?
       %li 

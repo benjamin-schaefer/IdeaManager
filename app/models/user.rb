@@ -4,14 +4,13 @@ class User < ActiveRecord::Base
   mount_uploader :picture, PictureUploader
   devise :database_authenticatable, :registerable,
          :recoverable, :rememberable, :trackable, :validatable
-  has_many :ideas
-  has_many :comments
+  has_many :ideas, dependent: :destroy
+  has_many :comments, dependent: :destroy
 
   validates :name, uniqueness: true
 
-  #admin hart reingecodet
-  def admin?    #? -> boolean, Konvention zur Lesbarkeit
-     name == "Admin" && id == 10
+  def admin?
+     name == "Admin" && id == 15
      #passwort: werbeboten
      #email: admin@admin.de
   end

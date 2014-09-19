@@ -1,0 +1,19 @@
+.user
+  = show_image(user, width:100)
+  - if user.locked?
+    Locked user
+  %br
+  - if can? :read_id, user
+    id: #{user.id}
+    %br
+  - if can? :read_email, user || user == current_user
+    Email:
+    = mail_to user.email, user.email
+  - if can? :update, user
+    %br
+    = link_to "Edit #{user.name}s profile", edit_user_registration_path
+  %br
+  - if current_user && current_user.admin?
+    = link_to "Lock #{user.name}", lock_user_path(user.id)
+    %br
+    = link_to "Delete #{user.name}", user_path(user), data: {confirm: "Are you sure you want to delete user #{user.name}?"}, method: :delete

@@ -26,8 +26,42 @@ gem 'jbuilder', '~> 2.0'
 # bundle exec rake doc:rails generates the API under doc/api.
 gem 'sdoc', '~> 0.4.0',          group: :doc
 
-# Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
-gem 'spring',        group: :development
+# Gems only used in development
+group :development do
+  # Annotate models with attribute-names
+  # Usage: annotate -p after
+  gem 'annotate'
+
+  # Better error page for Rails and other Rack apps
+  gem 'better_errors'
+    gem 'binding_of_caller'
+
+  # A hook to debug how rails-i18n lookup keys
+  # gem "rails-i18n-debug"
+
+  # Guard::RSpec automatically run your specs (much like autotest)
+  # gem 'guard-rspec'
+
+  # Easily manage magic comments for encoding for your ruby 1.9 applications
+  # Usage: magic_encoding
+  # gem 'magic_encoding'
+
+  # Rails 3 pry initializer
+  gem 'pry-rails'
+
+  # Create UML from sources
+  # gem 'railroady'
+
+  # A thin and fast web server
+  gem 'thin'
+
+  # Mutes assets pipeline log messages.
+  gem 'quiet_assets'
+  
+  # Spring speeds up development by keeping your application running in the background. Read more: https://github.com/rails/spring
+  gem 'spring'
+end
+
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt', '~> 3.1.7'

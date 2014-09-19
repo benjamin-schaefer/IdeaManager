@@ -1,12 +1,11 @@
 Rails.application.routes.draw do
   
   mount RailsAdmin::Engine => '/railsadmin', as: 'rails_admin'
+  
   devise_for :users
-
-  resources :users, only: [:index, :show]
-  #get "users/:id" => "user_profiles#show", as: :user
-  #get "users/" => "user_profiles#index", as: :users
-  #resources :user_profiles, only: [:index, :show]
+  #"resources :users" uses devise users model and implements an own controller and show pages
+  resources :users, only: [:index, :show, :destroy]
+  get "users/:id/lock_user" => 'users#lock_user', as: 'lock_user'
 
   get 'pages/info'
 

@@ -1,13 +1,7 @@
-%h3= "Profile of #{current_user_profile.name}"
-= show_image(current_user_profile)
-%br
-- if current_user_profile == current_user
-  = "Email: #{current_user_profile.email}"
-  %br
-  = link_to "Edit profile", edit_user_registration_path
-%br
-
-%h4= "Ideas of #{current_user_profile.name}"
-/- current_user_profile.ideas.each do |idea|
 %p
-  = render current_user_profile.ideas
+  %h3= current_user_profile.name
+  = render current_user_profile
+%p
+  - if current_user_profile.ideas.count > 0
+    %h4= "#{current_user_profile.name}s Ideas:"
+    = render current_user_profile.ideas
