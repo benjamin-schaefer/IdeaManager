@@ -3,17 +3,39 @@ class User < ActiveRecord::Base
   # :confirmable, :lockable, :timeoutable and :omniauthable
   mount_uploader :picture, PictureUploader
   devise :database_authenticatable, :registerable,
-         :recoverable, :rememberable, :trackable, :validatable
+         :recoverable, :rememberable, :trackable, :validatable#, 
+         #authentication_keys: [:name]
   has_many :ideas, dependent: :destroy
   has_many :comments, dependent: :destroy
 
-  validates :name, uniqueness: true
+  validates :name, uniqueness: { case_sensitive: false }
+
+  attr_accessor :login
+
+  def login=(login)
+    @login = login
+  end
+
+  def login
+    @login || name || email
+  end
 
   def admin?
      name == "Admin" && id == 15
      #passwort: werbeboten
      #email: admin@admin.de
   end
+
+#necessary for user login by email OR name
+  def self.find_first_by_auth_conditions(warden_conditions)
+    conditions = warden_conditions.dup
+    if login = conditions.delete(:login)
+      where(conditions).where(["lower(name) = :value OR lower(email) = :value", { value: login.downcase }]).first
+    else
+      where(conditions).first
+    end
+  end
+
 end
 
 # == Schema Information

@@ -14,8 +14,12 @@ class ApplicationController < ActionController::Base
 
   # add own parameters to devise controller:
   def configure_permitted_parameters
-    devise_parameter_sanitizer.for(:sign_up) << [ :name, :picture ]
-    devise_parameter_sanitizer.for(:account_update) << [ :name, :picture ]
+    # devise_parameter_sanitizer.for(:sign_up) << [ :name, :picture ]
+    # devise_parameter_sanitizer.for(:account_update) << [ :name, :picture ]
+
+    devise_parameter_sanitizer.for(:sign_up) { |u| u.permit(:name, :picture, :email, :password, :password_confirmation, :remember_me) }
+    devise_parameter_sanitizer.for(:sign_in) { |u| u.permit(:login, :password, :remember_me) } #:name, :email,
+    devise_parameter_sanitizer.for(:account_update) { |u| u.permit(:name, :picture, :email, :password, :password_confirmation, :current_password) }
   end
 
 end

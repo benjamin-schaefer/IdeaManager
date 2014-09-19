@@ -25,4 +25,5 @@ end
 #  updated_at             :datetime
 #  name                   :string(255)
 #  picture                :string(255)
+#  locked                 :boolean
 #
