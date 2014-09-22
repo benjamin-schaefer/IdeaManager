@@ -6,6 +6,7 @@ Rails.application.routes.draw do
   #"resources :users" uses devise users model and implements an own controller and show pages
   resources :users, only: [:index, :show, :destroy]
   get "users/:id/lock_user" => 'users#lock_user', as: 'lock_user'
+  get "users/:id/unlock_user" => 'users#unlock_user', as: 'unlock_user'
 
   get 'pages/info'
 

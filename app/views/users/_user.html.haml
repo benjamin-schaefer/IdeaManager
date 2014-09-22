@@ -14,6 +14,9 @@
     = link_to "Edit #{user.name}s profile", edit_user_registration_path
   %br
   - if current_user && current_user.admin?
-    = link_to "Lock #{user.name}", lock_user_path(user.id)
+    - unless user.locked
+      = link_to "Lock #{user.name}", lock_user_path(user.id)
+    - else
+      = link_to "Unlock #{user.name}", unlock_user_path(user.id)
     %br
     = link_to "Delete #{user.name}", user_path(user), data: {confirm: "Are you sure you want to delete user #{user.name}?"}, method: :delete

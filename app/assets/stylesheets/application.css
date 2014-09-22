@@ -15,34 +15,34 @@
  *= require_self
  */
 
-/*60px Abstand vom oberen Rand bis zur Überschrift*/
 body { padding-top: 0px; }    
 
-/*100px Abstand vom Inhalt zum Footer*/
-footer { 
-  /*margin-top: 100px;*/
-  position: fixed;
-  bottom: 5px;
-  text-align: center;
-}  
-
-/*Navigationsleiste*/
-ul { 
+/*navigation bar und footer*/
+ul{ 
   margin: 0px;
-  /*padding: 10px;*/
   list-style: none;
-  /*width: 525px;*/
 }
 
 ul li {
   display: inline;
 }
 
+.main-content {
+  padding-top: 22px;
+}
+
+/*navigation bar*/
+#list-nav {
+  position: fixed;
+  background: #fff;
+  margin-top: 1px;
+}
+
 ul#list-nav li a {
   text-decoration: none;
   padding: 5px 0;
   width: 100px;
-  background:  #D3D3D3;
+  background: #D3D3D3;
   color: #444;
   float: left;
   text-align: center;
@@ -52,4 +52,23 @@ ul#list-nav li a {
 ul#list-nav li a:hover {
   background: #a2b3a1;
   color: #000;
+}
+
+ul#list-nav li.user a {
+  background: #fff;
+  color: #0088cc;
+  text-align: left;
+  max-height: 20px;
+  max-width: 500px;
+}
+
+footer { 
+  background: #fff;
+  position: fixed;
+  bottom: 0px;
+  text-align: center;
+}  
+
+footer li a {
+  display: inline-block;
 }

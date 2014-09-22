@@ -22,6 +22,11 @@ class UsersController < ApplicationController#Devise::RegistrationsController
     redirect_to user_path(current_user_profile)
   end
 
+  def unlock_user
+    current_user_profile.locked = false
+    current_user_profile.save
+    redirect_to user_path(current_user_profile)
+  end
 
   def current_user_profile
     @current_user_profile ||= User.find(params[:id])
