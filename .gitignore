@@ -17,7 +17,7 @@
 /*.txt
 
 #ignore uploaded images
-/public/uploads/*
+/public/uploads/
 
 #ignore test script
 /scale_all_images.rb
