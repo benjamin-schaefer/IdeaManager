@@ -2,6 +2,7 @@
 
 
 de:
+  #messages
   devise:
     confirmations:
       confirmed: "Ihre Email-Adresse wurde erfolgreich bestätigt."
@@ -61,3 +62,4 @@ de:
       not_saved:
         one: "1 Fehler verhinderte, dass %{resource} gespeichert wurde:"
         other: "%{count} Fehler verhinderten, dass %{resource} gespeichert wurde:"
+  #
