@@ -1,10 +1,10 @@
-<h2>Listing comments</h2>
+<h2><%= t '.headline' %></h2>
 
 <table>
   <thead>
     <tr>
-      <th>User name</th>
-      <th>Body</th>
+      <th><%= t 'comments.user_name' %></th>
+      <th><%= t 'comments.body' %></th>
       <th colspan="2"></th>
     </tr>
   </thead>
@@ -14,12 +14,12 @@
       <tr>
         <td><%= comment.user_name %></td>
         <td><%= comment.body %></td>
-        <td><%= link_to 'Show', idea_comment_path(comment.idea_id, comment) %></td>
+        <td><%= link_to t('show'), idea_comment_path(comment.idea_id, comment) %></td>
         <% if can? :update, comment %>
-          <td><%= link_to 'Edit', edit_idea_comment_path(comment.idea_id, comment) %></td>
+          <td><%= link_to t('edit'), edit_idea_comment_path(comment.idea_id, comment) %></td>
         <% end %>
         <% if can? :delete, comment %>
-          <td><%= link_to 'Destroy', idea_comment_path(comment.idea_id, comment), method: :delete, data: { confirm: 'Are you sure?' } %></td>
+          <td><%= link_to t('delete'), idea_comment_path(comment.idea_id, comment), method: :delete, data: { confirm: t('confirm') } %></td>
         <% end %>
       </tr>
     <% end %>
@@ -28,4 +28,4 @@
 
 <br>
 
-<%= link_to 'New Comment', new_idea_comment_path(current_idea) %>
+<%= link_to t('.new_comment'), new_idea_comment_path(current_idea) %>

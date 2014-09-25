@@ -1,0 +1,96 @@
+de:
+
+  date:
+    formats:
+      default: "%d.%m.%Y"
+      short: "%e. %b"
+      long: "%e. %B %Y"
+      only_day: "%e"
+
+    day_names: [Sonntag, Montag, Dienstag, Mittwoch, Donnerstag, Freitag, Samstag]
+    abbr_day_names: [So, Mo, Di, Mi, Do, Fr, Sa]
+    month_names: [~, Januar, Februar, März, April, Mai, Juni, Juli, August, September, Oktober, November, Dezember]
+    abbr_month_names: [~, Jan, Feb, Mär, Apr, Mai, Jun, Jul, Aug, Sep, Okt, Nov, Dez]
+    order:
+      :day
+      :month
+      :year
+
+  time:
+    formats:
+      default: "%A, %e. %B %Y, %H:%M Uhr"
+      short: "%e. %B, %H:%M Uhr"
+      long: "%A, %e. %B %Y, %H:%M Uhr"
+      time: "%H:%M"
+      long_ordinal: "%d. %B %Y, %H:%M:%S"
+
+  back: "Zurück"
+  confirm: "Sind Sie sicher?"
+  delete: "Löschen"
+  edit: "Bearbeiten"
+  show: "Anzeigen"
+  comments:
+    body: "Text"
+    new_comment: "Neuer Kommentar"
+    user_name: "Benutzername"
+    #
+    comment:
+    form:
+      headline: "Schreibe einen eigenen Kommentar:"
+      submit: "Kommentar erstellen"
+    edit:
+      headline: "Kommentar bearbeiten"
+    index:
+      headline: "Kommentare"
+    new:
+      headline: "Neuer Kommentar"
+    show: 
+  ideas:
+    form:
+      name: "Name"
+      description: "Beschreibung"
+      picture: "Bild"
+      submit: "Idee erstellen"
+    idea:
+    edit:
+      headline: "Idee bearbeiten"
+    index: 
+      headline: "Liste von Ideen"
+    new:
+      headline: "Neue Idee"
+    show:
+      last_edited: "Zuletzt bearbeitet am "
+      comments: "Kommentare"
+  layouts:
+    application:
+      title: "Rails-Ideen"
+  pages:
+    info:
+      headline: "Impressum"
+      content: "Diese Seite wurde erstellt von %{name}."
+  shared:
+    footer:
+      created_by: "Erstellt von %{name}"
+      about: "Impressum"
+    menu:
+      admin: "Administrator"
+      edit_profile: "Profil bearbeiten"
+      ideas: "Ideen"
+      login: "Anmelden"
+      logout: "Abmelden"
+      new_idea: "Neue Idee"
+      signup: "Registrieren"
+      users_list: "Benutzerliste"
+  users:
+    idea_list: "%{name}s Ideen"
+    user:
+      confirm: "Sind Sie sicher, dass Sie %{name}s Account löschen wollen?"
+      delete: "%{name} löschen"
+      edit: "%{name}s Profil bearbeiten"
+      email: "E-Mail"
+      locked: "Gesperrter Benutzer"
+      lock: "%{name} sperren"
+      unlock: "%{name} entsperren"
+    index:
+      headline: "Liste aller Benutzer"
+    show:

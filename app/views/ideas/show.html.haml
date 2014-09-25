@@ -1,6 +1,6 @@
 .row  
   /image_tag("arrow-previous.jpeg", width:25)
-  %p= link_to "Back", ideas_path
+  %p= link_to t('back'), ideas_path
   %table.border{border:"1"}
     %td.border
       %table
@@ -21,12 +21,12 @@
           %td{valign:"top"}
             %p= current_idea.description
       %br
-      Last edited on 
+      = t '.last_edited' 
       = format_date(current_idea.user.updated_at)
       %br
-      = link_to 'Edit', edit_idea_path(current_idea) if can? :update, current_idea
-      = link_to 'Delete', current_idea, method: :delete, data: { confirm: 'Are you sure?' } if can? :delete, current_idea
+      = link_to t('edit'), edit_idea_path(current_idea) if can? :update, current_idea
+      = link_to t('delete'), current_idea, method: :delete, data: { confirm: 'Are you sure?' } if can? :delete, current_idea
   /Content für Kommentare
-  %h4 Comments
+  %h4= t '.comments'
   = render current_idea.comments
   = render "comments/form", current_comment: current_idea.comments.new

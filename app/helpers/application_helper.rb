@@ -14,8 +14,10 @@ module ApplicationHelper
 		end
 	end
 
-	def format_date(date)
-		date.to_s(:long_ordinal)
+	def format_date(date, format = :long_ordinal)
+		I18n.l(date, format: format)
+
+		#date.to_s(:long_ordinal)
 		#date.strftime("%d").to_i.ordinalize + date.strftime(" %B %Y, %H:%M:%S")
 	end
 end

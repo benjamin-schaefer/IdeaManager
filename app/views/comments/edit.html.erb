@@ -1,5 +1,5 @@
-<h2>Editing comment</h2>
+<h2><%= t '.headline' %></h2>
 
 <%= render 'form' %>
 
-<%= link_to 'Back', idea_path(current_comment.idea) %>
+<%= link_to t('back'), idea_path(current_comment.idea) %>

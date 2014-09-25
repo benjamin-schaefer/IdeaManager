@@ -1,0 +1,63 @@
+# Additional translations at https://github.com/plataformatec/devise/wiki/I18n
+
+
+de:
+  devise:
+    confirmations:
+      confirmed: "Ihre Email-Adresse wurde erfolgreich bestätigt."
+      send_instructions: "Sie werden eine Email mit Anweisungen erhalten, wie Sie Ihre Email-Adresse innerhalb weniger Minuten bestätigen können."
+      send_paranoid_instructions: "Wenn Ihre Email-Adresse in unserer Datenbank existiert, werden Sie eine Email mit Anweisungen erhalten, wie Sie Ihre Email-Adresse innerhalb weniger Minuten bestätigen können."
+    failure:
+      already_authenticated: "Sie sind bereits eingeloggt."
+      inactive: "Ihr Account ist noch nicht aktiviert."
+      invalid: "Login oder Passwort ungültig."
+      locked: "Ihr Account ist gesperrt."
+      last_attempt: "Sie haben einen oder mehrere Versuche, bevor Ihr Account gesperrt wird."
+      not_found_in_database: "Login oder Passwort ungültig."
+
+      timeout: "Ihre Sitzung ist abgelaufen. Bitte loggen Sie sich ein, um fortzufahren."
+      unauthenticated: "Sie müssen eingeloggt sein, um fortfahren zu können."
+      unconfirmed: "Sie müssen Ihre Email-Adresse bestätigen, um fortfahren zu können."
+    mailer:
+      confirmation_instructions:
+        subject: "Anweisungen zur Account-Bestätigung"
+      reset_password_instructions:
+        subject: "Anweisungen, um Passwort zurückzusetzen"
+      unlock_instructions:
+        subject: "Anweisungen zum Entsperren"
+    omniauth_callbacks:
+      failure: "Sie konnten nicht von %{kind} authentifiziert werden, weil \"%{reason}\"."
+      success: "Erfolgreich von %{kind} Account authentifiziert."
+    passwords:
+      no_token: "Sie können auf diese Seite nicht zugreifen #####--TODO--#### without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided."
+      send_instructions: "Sie werden eine Email mit Anweisungen erhalten, wie Sie Ihr Passwort in wenigen Minuten aktivieren können."
+      send_paranoid_instructions: "Wenn Ihre Email-Adresse in unserer Datenbank existiert, werden Sie in wenigen Minuten einen Link zur Passwort-Aktivierung in Ihrem Email-Postfach haben."
+      updated: "Ihr Passwort wurde erfolgreich geändert. Sie sind nun eingeloggt."
+      updated_not_active: "Ihr Passwort wurde erfolgreich geändert."
+    registrations:
+      destroyed: "Auf wiedersehen! Ihr Account wurde erfolgreich gelöscht. Wir hoffen, Sie bald wiederzusehen."
+      signed_up: "Willkommen! Sie haben sich erfolgreich angemeldet."
+      signed_up_but_inactive: "Sie haben sich erfolgreich angemeldet. Wir konnten Sie allerdings noch nicht einloggen, da Ihr Account noch nicht aktiviert ist."
+      signed_up_but_locked: "Sie haben sich erfolgreich angemeldet. Wir konnten Sie allerdings noch nicht einloggen, da Ihr Account gesperrt ist."
+      signed_up_but_unconfirmed: "Eine Nachricht mit einem Bestätigungslink wurde an Ihre Email-Adresse gesendet. Bitte folgen Sie dem Link, um Ihren Account zu aktivieren."
+      update_needs_confirmation: "Sie haben Ihren Account erfolgreich bearbeitet, aber wir müssen Ihre Email-Adresse noch verifizieren. Bitte lesen Sie die Email und folgen Sie dem Link, um Ihre Email-Adresse zu bestätigen."
+      updated: "Ihr Account wurde erfolgreich bearbeitet."
+    sessions:
+      user:
+        signed_in: "Erfolgreich eingeloggt."
+        signed_out: "Erfolgreich ausgeloggt."
+        already_signed_out: "Erfolgreich ausgeloggt."
+    unlocks:
+      send_instructions: "Sie werden eine Email mit Anweisungen erhalten, wie Sie Ihren Account in wenigen Minuten freischalten können."
+      send_paranoid_instructions: "Falls Ihr Account existiert, Werden Sie eine Email mit Anweisungen erhalten, wie Sie Ihren Account innerhalb weniger Minuten freischalten können."
+      unlocked: "Ihr Account wurde erfolgreich freigeschaltet. Bitte loggen Sie sich ein, um fortzufahren."
+  errors:
+    messages:
+      already_confirmed: "bereits bestätigt, bitte loggen Sie sich ein, um fortzufahren"
+      confirmation_period_expired: "Muss innerhalb von %{period} bestätigt werden, bitte fordern Sie eine neue an"
+      expired: "ist abgelaufen, bitte fordern Sie eine neue an"
+      not_found: "nicht gefunden"
+      not_locked: "war nicht gesperrt"
+      not_saved:
+        one: "1 Fehler verhinderte, dass %{resource} gespeichert wurde:"
+        other: "%{count} Fehler verhinderten, dass %{resource} gespeichert wurde:"

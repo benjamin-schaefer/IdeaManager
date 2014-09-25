@@ -1,23 +1,96 @@
-# Files in the config/locales directory are used for internationalization
-# and are automatically loaded by Rails. If you want to use locales other
-# than English, add the necessary files in this directory.
-#
-# To use the locales, use `I18n.t`:
-#
-#     I18n.t 'hello'
-#
-# In views, this is aliased to just `t`:
-#
-#     <%= t('hello') %>
-#
-# To use a different locale, set it with `I18n.locale`:
-#
-#     I18n.locale = :es
-#
-# This would use the information in config/locales/es.yml.
-#
-# To learn more, please read the Rails Internationalization guide
-# available at http://guides.rubyonrails.org/i18n.html.
-
 en:
-  hello: "Hello world"
+
+  date:
+    formats:
+      default: "%Y-%m-%d"
+      short: "%e %b"
+      long: "%e. %B %Y"
+      only_day: "%e"
+
+    day_names: [Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday]
+    abbr_day_names: [Su, Mo, Tu, We, Th, Fr, Sa]
+    month_names: [~, January, February, March, April, May, June, July, August, September, October, November, December]
+    abbr_month_names: [~, Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec]
+    order:
+      :day
+      :month
+      :year
+
+  time:
+    formats:
+      default: "%A, %e. %B %Y, %H:%M Uhr"
+      short: "%e. %B, %H:%M Uhr"
+      long: "%A, %e. %B %Y, %H:%M Uhr"
+      time: "%H:%M"
+      long_ordinal: "%B %d %Y, %H:%M:%S"
+
+  back: "Back"
+  confirm: "Are you sure?"
+  delete: "Delete"
+  edit: "Edit"
+  show: "Show"
+  comments:
+    body: "Text"
+    new_comment: "New Comment"
+    user_name: "User name"
+    #
+    comment:
+    form:
+      headline: "Write an own comment:"
+      submit: "Create comment"
+    edit:
+      headline: "Edit comment"
+    index:
+      headline: "Comments"
+    new:
+      headline: "New comment"
+    show: 
+  ideas:
+    form:
+      name: "Name"
+      description: "Description"
+      picture: "Picture"
+      submit: "Create idea"
+    idea:
+    edit:
+      headline: "Edit idea"
+    index: 
+      headline: "Ideas list"
+    new:
+      headline: "New idea"
+    show:
+      last_edited: "Last edited on "
+      comments: "Comments"
+  layouts:
+    application:
+      title: "RailsIdeas"
+  pages:
+    info:
+      headline: "About"
+      content: "This page was created by %{name}."
+  shared:
+    footer:
+      created_by: "Created by %{name}"
+      about: "about"
+    menu:
+      admin: "Administrator"
+      edit_profile: "Edit profile"
+      ideas: "Ideas"
+      login: "Login"
+      logout: "Logout"
+      new_idea: "New Idea"
+      signup: "Register"
+      users_list: "User list"
+  users:
+    idea_list: "%{name}s ideas"
+    user:
+      confirm: "Are you sure you want to delete %{name}s account?"
+      delete: "Delete %{name}"
+      edit: "Edit %{name} profile"
+      email: "Email"
+      locked: "Locked user"
+      lock: "Lock %{name}"
+      unlock: "%Unlock {name}"
+    index:
+      headline: "Users list"
+    show:

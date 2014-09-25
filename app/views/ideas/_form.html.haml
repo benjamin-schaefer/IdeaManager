@@ -7,19 +7,20 @@
       - current_idea.errors.full_messages.each do |message|
         %li= message
   .field
-    = f.label :name
+    = f.label t('.name')
     = f.text_field :name
   %br
   .field
-    = f.label :description
+    = f.label t('.description')
     = f.text_area :description
   .field
-    = f.label :picture
+    = f.label t('.picture')
     = show_idea_image(current_idea, width: 150)
     %br
     = f.file_field :picture, accept: "image/*" #nur Bilddateien anzeigen! (erzeugter html-Code: 'accept="image/*"'
+
   %br
   .actions
-    = f.submit
+    = f.submit t('.submit')
 /debug action_name       - gibt aktuelle Action wieder(new, edit)
 /debug controller_name   - gibt aktuellen controller wieder (ideas in diesem Fall)

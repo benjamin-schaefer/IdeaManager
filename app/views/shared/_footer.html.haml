@@ -2,7 +2,9 @@
   %ul
     %li
       rails girls 2014
+      |
     %li
-      created by Benjamin Schäfer
+      = t('.created_by', name: "Benjamin Schäfer")
+      |
     %li
-      = link_to"about", pages_info_path
+      = link_to t('.about'), pages_info_path

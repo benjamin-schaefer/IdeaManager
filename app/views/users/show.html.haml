@@ -3,5 +3,5 @@
   = render current_user_profile
 %p
   - if current_user_profile.ideas.count > 0
-    %h4= "#{current_user_profile.name}s Ideas:"
+    %h4= t('users.idea_list', name: current_user_profile.name)
     = render current_user_profile.ideas

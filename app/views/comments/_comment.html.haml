@@ -8,5 +8,5 @@
   %br
   %p= comment.body
   %p
-    = link_to 'Edit', edit_idea_comment_path(current_idea, comment) if can? :update, comment
-    = link_to 'Delete', idea_comment_path(current_idea, comment), method: :delete, data: { confirm: 'Are you sure?'} if can? :delete, comment
+    = link_to t('edit'), edit_idea_comment_path(current_idea, comment) if can? :update, comment
+    = link_to t('delete'), idea_comment_path(current_idea, comment), method: :delete, data: { confirm: t('confirm')} if can? :delete, comment
