@@ -1,5 +1,4 @@
 de:
-
   date:
     formats:
       default: "%d.%m.%Y"
@@ -38,6 +37,7 @@ de:
     form:
       headline: "Schreibe einen eigenen Kommentar:"
       submit: "Kommentar erstellen"
+      write_new_comment: "Schreibe einen eigenen Kommentar:"
     edit:
       headline: "Kommentar bearbeiten"
     index:
@@ -93,4 +93,3 @@ de:
       unlock: "%{name} entsperren"
     index:
       headline: "Liste aller Benutzer"
-    show:

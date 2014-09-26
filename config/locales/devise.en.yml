@@ -1,10 +1,21 @@
 # Additional translations at https://github.com/plataformatec/devise/wiki/I18n
 
-
 en:
   devise:
-    #messages
+    #
+    greeting_informal: "Hello, %{email}!"
+    email: "Email"
+    name: "Name"
+    login: "Login"
+    picture: "Picture"
+    password: "Password"
+    confirm_password: "Confirm password"
+    #
     confirmations:
+      new: 
+        headline: "Resend confirmation instructions"
+        submit: "Resend confirmation instructions"
+      #
       confirmed: "Your email address has been successfully confirmed."
       send_instructions: "You will receive an email with instructions for how to confirm your email address in a few minutes."
       send_paranoid_instructions: "If your email address exists in our database, you will receive an email with instructions for how to confirm your email address in a few minutes."
@@ -21,21 +32,55 @@ en:
       unconfirmed: "You have to confirm your email address before continuing."
     mailer:
       confirmation_instructions:
+        greeting: "Welcome, %{email}!"
+        content: "You can confirm your account email through the link below:"
+        confirm_account: 'Confirm my account'
+        #
         subject: "Confirmation instructions"
       reset_password_instructions:
+        someone_requested_link: "Someone has requested a link to change your password. You can do this through the link below."
+        change_password: "Change my password"
+        if_not_requested: "If you didn't request this, please ignore this email."
+        #
         subject: "Reset password instructions"
       unlock_instructions:
+        lock_reason: "Your account has been locked due to an excessive number of unsuccessful sign in attempts."
+        click_to_unlock: "Click the link below to unlock your account:"
+        unlock_account: "Unlock my account"
+        #
         subject: "Unlock instructions"
     omniauth_callbacks:
       failure: "Could not authenticate you from %{kind} because \"%{reason}\"."
       success: "Successfully authenticated from %{kind} account."
     passwords:
+      edit:
+        headline: "Change your password"
+        new_password: "New password"
+        confirm_password: "Confirm new password"
+        change_password: "Change my password"
+      new:
+        headline: "Forgot your password?"
+        submit: "Send me reset password instructions"
+        #
       no_token: "You can't access this page without coming from a password reset email. If you do come from a password reset email, please make sure you used the full URL provided."
       send_instructions: "You will receive an email with instructions on how to reset your password in a few minutes."
       send_paranoid_instructions: "If your email address exists in our database, you will receive a password recovery link at your email address in a few minutes."
       updated: "Your password has been changed successfully. You are now signed in."
       updated_not_active: "Your password has been changed successfully."
     registrations:
+      edit:
+        headline: "Edit %{name}s profile"
+        leave_blank: "leave blank if you don't want to change it"
+        wait_confirmation_for: "Currently waiting confirmation for: %{email}"
+        current_password: "Current password"
+        password_to_confirm: "(we need your current password to confirm your changes)"
+        submit: "Update"
+        cancel_account: "Cancel my account"
+        unhappy: "Unhappy?"
+      new:
+        min_password_length: "%{length} characters minimum"
+        submit: "Create user"
+        #
       destroyed: "Bye! Your account has been successfully cancelled. We hope to see you again soon."
       signed_up: "Welcome! You have signed up successfully."
       signed_up_but_inactive: "You have signed up successfully. However, we could not sign you in because your account is not yet activated."
@@ -44,11 +89,29 @@ en:
       update_needs_confirmation: "You updated your account successfully, but we need to verify your new email address. Please check your email and follow the confirm link to confirm your new email address."
       updated: "Your account has been updated successfully."
     sessions:
+      new:
+        headline: "Log in"
+        remember_me: "Remember me"
+        submit: "Log in"
+      #
       user:
         signed_in: "Signed in successfully."
         signed_out: "Signed out successfully."
         already_signed_out: "Signed out successfully."
+    shared: 
+      links:
+        login: "Log in"
+        signup: "Sign up"
+        forgot_password: "Forgot your password?"
+        not_recieved_confirmation_instructions: "Didn't receive confirmation instructions?"
+        not_recieved_unlock_instructions: "Didn't receive unlock instructions?"
+        sign_in_with: "Sign in with %{provider}"
+    #
     unlocks:
+      new:
+        headline: "Resend unlock instructions"
+        submit: "Resend unlock instructions"
+      #
       send_instructions: "You will receive an email with instructions for how to unlock your account in a few minutes."
       send_paranoid_instructions: "If your account exists, you will receive an email with instructions for how to unlock it in a few minutes."
       unlocked: "Your account has been unlocked successfully. Please sign in to continue."
@@ -62,18 +125,3 @@ en:
       not_saved:
         one: "1 error prohibited this %{resource} from being saved:"
         other: "%{count} errors prohibited this %{resource} from being saved:"
-    #
-    confirmations:
-      new: 
-        headline: "Resend confirmation instructions"
-        submit: "Resend confirmation instructions"
-      mailer:
-        confirmation_instructions:
-          greeting: "Welcome, %{email}!"
-          content: "You can confirm your account email through the link below:"
-          confirm_account: 'Confirm my account'
-        reset_password_instructions:
-          greeting: "Hello, %{email}!"
-          content: "Someone has requested a link to change your password. You can do this through the link below."
-          change_password: "Change my password"
-          if_not_requested: "If you didn't request this, please ignore this email."

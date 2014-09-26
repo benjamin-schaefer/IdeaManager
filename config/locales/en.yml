@@ -1,5 +1,4 @@
 en:
-
   date:
     formats:
       default: "%Y-%m-%d"
@@ -38,6 +37,7 @@ en:
     form:
       headline: "Write an own comment:"
       submit: "Create comment"
+      write_new_comment: "Write an own comment:"
     edit:
       headline: "Edit comment"
     index:
@@ -93,4 +93,3 @@ en:
       unlock: "%Unlock {name}"
     index:
       headline: "Users list"
-    show:

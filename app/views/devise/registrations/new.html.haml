@@ -16,16 +16,19 @@
   %div
     = f.label :password
     - if @validatable
-      %i="(#{@minimum_password_length} characters minimum)"
+      %i
+        (
+        = t('.min_password_length', length: @minimum_password_length) 
+        )
     %br
     = f.password_field :password, autocomplete: "off"
   %br
 
   %div
-    = f.label :password_confirmation
+    = f.label t('devise.confirm_password')
     = f.password_field :password_confirmation, autocomplete: "off"
   %br
 
-  %div= f.submit
+  %div= f.submit t('.submit')
 
 = render "devise/shared/links"

@@ -7,14 +7,14 @@
       - current_idea.errors.full_messages.each do |message|
         %li= message
   .field
-    = f.label t('.name')
+    = f.label :name
     = f.text_field :name
   %br
   .field
-    = f.label t('.description')
+    = f.label :description
     = f.text_area :description
   .field
-    = f.label t('.picture')
+    = f.label :picture
     = show_idea_image(current_idea, width: 150)
     %br
     = f.file_field :picture, accept: "image/*" #nur Bilddateien anzeigen! (erzeugter html-Code: 'accept="image/*"'

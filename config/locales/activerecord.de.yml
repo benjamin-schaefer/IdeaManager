@@ -1,0 +1,36 @@
+de:
+  activerecord:
+    attributes:
+      comment:
+        body: "Text"
+        created_at: "Erstellt am"
+        updated_at: "Bearbeitet am"
+      idea:
+        name: "Name"
+        description: "Inhalt"
+        picture: "Bild"
+        created_at: "Erstellt am"
+        updated_at: "Bearbeitet am"
+      user:
+        email: "E-Mail"
+        name: "Name"
+        picture: "Bild"
+        password: "Passwort"
+        locked: "Gesperrt"
+        current_password: "Aktuelles Passwort"
+    errors:
+      models:
+        idea:
+          attributes:
+            name:
+              blank: "Bitte Name eingeben!"
+            description:
+              blank: "Bitte Text eingeben!"
+        user:
+          attributes:
+            current_password: 
+              blank: "Bitte gib dein aktuelles Passwort ein!"
+            password_confirmation:
+              confirmation: "Neues Passwort muss bestätigt werden!"
+            password:
+              too_short: "Neues Passwort ist zu kurz!"

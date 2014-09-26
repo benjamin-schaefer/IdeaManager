@@ -1,5 +1,5 @@
 .container
-  %ul#list-nav
+  %ul#list-nav.always-visible
     %li
       = link_to t('.ideas'), ideas_path
     - if can? :create, Idea
