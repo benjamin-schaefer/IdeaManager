@@ -1,0 +1,17 @@
+%x3d{ width: '600px', height: '400px' }
+  %scene
+    %directionallight{ direction: "-1 -1 -1", on: true, intensity: 1.0, shadowIntensity:0.4 } 
+
+    %transform{translation: "0 -1.5 0"}
+      %shape
+        %appearance
+          %material{ diffusecolor: "0.1 0.2 0.3" }
+        %box{ size: "8 0.1 8" }
+
+    %shape
+      %appearance
+        %material{ diffusecolor: "1 0 0", specularColor: "0 1 0" }
+      %box
+
+%button#btn_light{ onclick: "toggle_light()" }
+  toggle light

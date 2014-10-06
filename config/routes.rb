@@ -10,6 +10,8 @@ Rails.application.routes.draw do
 
   get 'pages/info'
 
+  get 'x3dom' => "x3dom#index"
+
   # resources :admin do
   #   resources :ideas
   #   resources :users

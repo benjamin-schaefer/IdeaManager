@@ -4,6 +4,9 @@
     %title= t('.title')
     / <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/twitter-bootstrap/2.3.2/css/bootstrap.min.css"> 
     / < %= stylesheet_link_tag "bootstrap.min" %>
+    = javascript_include_tag 'http://www.x3dom.org/download/x3dom.js' #'x3dom-full'
+    = stylesheet_link_tag 'http://www.x3dom.org/download/x3dom.css'
+
     = stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track' => true 
     = javascript_include_tag 'application', 'data-turbolinks-track' => true
     = csrf_meta_tags 
@@ -18,4 +21,5 @@
           %p.alert.alert-danger
             = alert
         = yield
+
     = render("shared/footer")

@@ -8,18 +8,10 @@
 	"buffers":
 	[
 		{
-			"file": "Gemfile",
+			"file": "app/helpers/application_helper.rb",
 			"settings":
 			{
-				"buffer_size": 2579,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "app/views/devise/registrations/edit.html.erb",
-			"settings":
-			{
-				"buffer_size": 1503,
+				"buffer_size": 696,
 				"line_ending": "Unix"
 			}
 		},
@@ -27,42 +19,66 @@
 			"file": "app/views/layouts/application.html.haml",
 			"settings":
 			{
-				"buffer_size": 519,
+				"buffer_size": 813,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "config/initializers/localeapp.rb",
+			"file": "app/controllers/x3dom_controller.rb",
 			"settings":
 			{
-				"buffer_size": 296,
+				"buffer_size": 74,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"contents": "CopycopterClient.configure do |config|\n  config.api_key = 'f5454724c4a428d8f04505fb30067b8ff92a81cd32fd358f'\n  config.host = 'localhost'\n  config.port = '3001'\nend",
-			"file": "config/initializers/copycopter.rb",
-			"file_size": 163,
-			"file_write_time": 1412067313000000,
+			"file": "config/routes.rb",
 			"settings":
 			{
-				"buffer_size": 163,
+				"buffer_size": 2399,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "/home/benjamin/projects/I18n.txt",
+			"file": "app/controllers/application_controller.rb",
 			"settings":
 			{
-				"buffer_size": 1397,
+				"buffer_size": 2230,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "config/locales/activerecord.de.yml",
+			"file": "app/views/ideas/_idea.html.haml",
 			"settings":
 			{
-				"buffer_size": 984,
+				"buffer_size": 126,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "# Place all the behaviors and hooks related to the matching controller here.\n# All this logic will automatically be available in application.js.\n# You can use CoffeeScript in this file: http://coffeescript.org/\n\ntoggle_light ->\n  $('')",
+			"file": "app/assets/javascripts/x3dom.js.coffee",
+			"file_size": 227,
+			"file_write_time": 1412607659000000,
+			"settings":
+			{
+				"buffer_size": 235,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/x3dom/index.html.erbe",
+			"settings":
+			{
+				"buffer_size": 636,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "app/views/x3dom/index.html.haml",
+			"settings":
+			{
+				"buffer_size": 462,
 				"line_ending": "Unix"
 			}
 		}
@@ -95,6 +111,33 @@
 	},
 	"file_history":
 	[
+		"/home/benjamin/projects/railsgirls/app/views/ideas/index.html.haml",
+		"/etc/hosts",
+		"/home/benjamin/projects/railsgirls/app/views/devise/registrations/new.html.haml",
+		"/home/benjamin/projects/railsgirls/app/views/x3dom/index.html.haml",
+		"/home/benjamin/projects/railsgirls/app/views/x3dom/index.html.erb",
+		"/home/benjamin/projects/railsgirls/app/views/x3dom/index.haml.erb",
+		"/home/benjamin/projects/railsgirls/config/initializers/assets.rb",
+		"/home/benjamin/projects/I18n.txt",
+		"/home/benjamin/projects/railsgirls/Rakefile",
+		"/home/benjamin/projects/railsgirls/config/application.rb",
+		"/home/benjamin/projects/railsgirls/config/routes.rb",
+		"/home/benjamin/projects/railsgirls/Gemfile",
+		"/home/benjamin/projects/railsgirls/app/models/concerns/.keep",
+		"/home/benjamin/projects/railsgirls/config/translation_center.yaml",
+		"/home/benjamin/projects/railsgirls/app/views/layouts/application.html.haml",
+		"/home/benjamin/projects/railsgirls/app/i18n/en.yml",
+		"/home/benjamin/projects/railsgirls/config/locales/activerecord.de.yml",
+		"/home/benjamin/text_website.txt",
+		"/home/benjamin/projects/railsgirls/app/i18n/de.yml",
+		"/home/benjamin/projects/railsgirls/app/views/ideas/new.html.haml",
+		"/home/benjamin/projects/railsgirls/app/controllers/application_controller.rb",
+		"/home/benjamin/projects/railsgirls/config/locales/de.yml",
+		"/home/benjamin/projects/railsgirls/config/locales/en.yml",
+		"/home/benjamin/projects/railsgirls/app/assets/stylesheets/application.css",
+		"/home/benjamin/projects/railsgirls/config/initializers/localeapp.rb",
+		"/home/benjamin/projects/railsgirls/app/views/devise/registrations/edit.html.erb",
+		"/home/benjamin/projects/railsgirls/config/initializers/copycopter.rb",
 		"/home/benjamin/projects/railsgirls/app/assets/javascripts/application.js",
 		"/home/benjamin/projects/railsgirls/config/locales/de-DE.yml",
 		"/home/benjamin/projects/railsgirls/railsgirls.sublime-project",
@@ -103,7 +146,6 @@
 		"/home/benjamin/projects/railsgirls/app/controllers/ideas_controller.rb",
 		"/home/benjamin/projects/railsgirls/app/views/comments/_form.html.erb",
 		"/home/benjamin/projects/railsgirls/app/views/ideas/show.html.erb",
-		"/home/benjamin/projects/railsgirls/config/routes.rb",
 		"/home/benjamin/Schreibtisch/shortcuts sublime.txt",
 		"/home/benjamin/projects/railsgirls/app/models/comment.rb",
 		"/home/benjamin/projects/railsgirls/app/views/comments/index.html.erb",
@@ -113,13 +155,11 @@
 		"/home/benjamin/projects/railsgirls/app/uploaders/picture_uploader.rb",
 		"/home/benjamin/projects/railsgirls/app/views/ideas/_form.html.erb",
 		"/home/benjamin/projects/railsgirls/app/views/ideas/index.html.erb",
-		"/home/benjamin/projects/railsgirls/app/assets/stylesheets/application.css",
 		"/home/benjamin/projects/railsgirls/app/helpers/ideas_helper.rb",
 		"/home/benjamin/.config/sublime-text-2/Packages/Default/Preferences.sublime-settings",
 		"/home/benjamin/.config/sublime-text-2/Packages/User/Preferences.sublime-settings",
 		"/home/benjamin/projects/railsgirls/app/views/layouts/application.html.erb",
-		"/home/benjamin/projects/railsgirls/app/views/pages/info.html.erb",
-		"/home/benjamin/projects/railsgirls/Gemfile"
+		"/home/benjamin/projects/railsgirls/app/views/pages/info.html.erb"
 	],
 	"find":
 	{
@@ -127,9 +167,10 @@
 	},
 	"find_in_files":
 	{
-		"height": 0.0,
+		"height": 93.0,
 		"where_history":
 		[
+			""
 		]
 	},
 	"find_state":
@@ -137,6 +178,12 @@
 		"case_sensitive": true,
 		"find_history":
 		[
+			"request.domain.split",
+			"      \n",
+			"module Rails",
+			"match ':controller/:action'",
+			"headline",
+			"params[:locale]",
 			"set_comment",
 			"+",
 			"<%= form_for(@comment) do |f| %>\n  <% if @comment.errors.any? %>\n    <div id=\"error_explanation\">\n      <h2><%= pluralize(@comment.errors.count, \"error\") %> prohibited this comment from being saved:</h2>\n\n      <ul>\n      <% @comment.errors.full_messages.each do |message| %>\n        <li><%= message %></li>\n      <% end %>\n      </ul>\n    </div>\n  <% end %>\n\n  <div class=\"field\">\n    <%= f.label :user_name %><br>\n    <%= f.text_field :user_name %>\n  </div>\n  <div class=\"field\">\n    <%= f.label :body %><br>\n    <%= f.text_area :body %>\n    <%= f.hidden_field :idea_id %>\n  </div>\n  <div class=\"actions\">\n    <%= f.submit %>\n  </div>\n<% end %>\n",
@@ -170,58 +217,29 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 6,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "Gemfile",
+					"file": "app/helpers/application_helper.rb",
 					"settings":
 					{
-						"buffer_size": 2579,
+						"buffer_size": 696,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2579,
-								2579
+								492,
+								492
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Ruby/Ruby.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 864.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "app/views/devise/registrations/edit.html.erb",
-					"settings":
-					{
-						"buffer_size": 1503,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								222,
-								222
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/Rails/HTML (Rails).tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -230,19 +248,19 @@
 					"type": "text"
 				},
 				{
-					"buffer": 2,
+					"buffer": 1,
 					"file": "app/views/layouts/application.html.haml",
 					"settings":
 					{
-						"buffer_size": 519,
+						"buffer_size": 813,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								287,
-								287
+								281,
+								281
 							]
 						],
 						"settings":
@@ -258,24 +276,132 @@
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "config/initializers/localeapp.rb",
+					"buffer": 2,
+					"file": "app/controllers/x3dom_controller.rb",
 					"settings":
 					{
-						"buffer_size": 296,
+						"buffer_size": 74,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								216,
-								216
+								74,
+								74
 							]
 						],
 						"settings":
 						{
 							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "config/routes.rb",
+					"settings":
+					{
+						"buffer_size": 2399,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								712,
+								712
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "app/controllers/application_controller.rb",
+					"settings":
+					{
+						"buffer_size": 2230,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1482,
+								1482
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Ruby/Ruby.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 162.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "app/views/ideas/_idea.html.haml",
+					"settings":
+					{
+						"buffer_size": 126,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "app/assets/javascripts/x3dom.js.coffee",
+					"settings":
+					{
+						"buffer_size": 235,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								235,
+								235
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -290,24 +416,24 @@
 			"sheets":
 			[
 				{
-					"buffer": 4,
-					"file": "config/initializers/copycopter.rb",
+					"buffer": 7,
+					"file": "app/views/x3dom/index.html.erbe",
 					"settings":
 					{
-						"buffer_size": 163,
+						"buffer_size": 636,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								163,
-								163
+								166,
+								166
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Ruby/Ruby.tmLanguage"
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
 						},
 						"translation.x": 0.0,
 						"translation.y": 0.0,
@@ -316,50 +442,24 @@
 					"type": "text"
 				},
 				{
-					"buffer": 5,
-					"file": "/home/benjamin/projects/I18n.txt",
+					"buffer": 8,
+					"file": "app/views/x3dom/index.html.haml",
 					"settings":
 					{
-						"buffer_size": 1397,
+						"buffer_size": 462,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1397,
-								1397
+								451,
+								451
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/Text/Plain text.tmLanguage"
-						},
-						"translation.x": 0.0,
-						"translation.y": 432.0,
-						"zoom_level": 1.0
-					},
-					"type": "text"
-				},
-				{
-					"buffer": 6,
-					"file": "config/locales/activerecord.de.yml",
-					"settings":
-					{
-						"buffer_size": 984,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								396,
-								396
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/YAML/YAML.tmLanguage",
+							"syntax": "Packages/Rails/Ruby Haml.tmLanguage",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
@@ -378,7 +478,7 @@
 	},
 	"input":
 	{
-		"height": 0.0
+		"height": 34.0
 	},
 	"layout":
 	{
@@ -400,7 +500,7 @@
 		"cols":
 		[
 			0.0,
-			0.517662827206,
+			0.464634893081,
 			1.0
 		],
 		"rows":
@@ -424,6 +524,42 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				".html.haml",
+				"app/views/devise/registrations/new.html.haml"
+			],
+			[
+				"routes",
+				"config/routes.rb"
+			],
+			[
+				"assets.rb",
+				"config/initializers/assets.rb"
+			],
+			[
+				"gemfi",
+				"Gemfile"
+			],
+			[
+				"application_con",
+				"app/controllers/application_controller.rb"
+			],
+			[
+				"application.r",
+				"config/application.rb"
+			],
+			[
+				"gemfile",
+				"Gemfile"
+			],
+			[
+				"application.css",
+				"app/assets/stylesheets/application.css"
+			],
+			[
+				"application.html",
+				"app/views/layouts/application.html.haml"
+			],
 			[
 				"applic",
 				"app/views/layouts/application.html.haml"
