@@ -2,6 +2,7 @@ Rails.application.routes.draw do
   
   mount RailsAdmin::Engine => '/railsadmin', as: 'rails_admin'
   
+  get '/users/sign_out' => 'devise/sessions#destroy'
   devise_for :users
   #"resources :users" uses devise users model and implements an own controller and show pages
   resources :users, only: [:index, :show, :destroy]
